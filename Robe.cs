@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Quest
 {
-    class Robe
+    public class Robe
     {
         public static List<string> ColorList = new List<string>()
         {

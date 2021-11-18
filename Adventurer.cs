@@ -54,8 +54,9 @@ namespace Quest
             string colors = string.Join(", ", Robe.ColorList);
             int length = Robe.Length;
             string Name = name;
+            string hatDescription = Hat.ShininessDescription(Name);
 
-            return $@"{Name}'s robe is {colors}, and is {length} feet long";
+            return $@"{Name}'s robe is {colors}, and is {length} feet long. {hatDescription}";
         }
     }
 }

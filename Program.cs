@@ -68,15 +68,91 @@ namespace Quest
             // And praises or humiliates them accordingly
             if (theAdventurer.Awesomeness >= maxAwesomeness)
             {
+                string choice;
+
                 Console.WriteLine("YOU DID IT! You are truly awesome!");
+                Console.WriteLine("");
+                Console.WriteLine("Would you like to try again?");
+                Console.WriteLine("Y/N:");
+                choice = Console.ReadLine().ToLower();
+                Console.Clear();
+
+                switch (choice)
+                {
+                    case "y":
+                    case "yes":
+                    {
+                        foreach (Challenge challenge in challenges)
+                        {
+                            challenge.RunChallenge(theAdventurer);
+                        }
+                        break;
+                    }
+                    case "n":
+                    case "no":
+                    {
+                        return;
+                    }
+                }
             }
             else if (theAdventurer.Awesomeness <= minAwesomeness)
             {
+                string choice;
+
                 Console.WriteLine("Get out of my sight. Your lack of awesomeness offends me!");
+                Console.WriteLine("");
+                Console.WriteLine("Would you like to try again?");
+                Console.WriteLine("Y/N:");
+                choice = Console.ReadLine().ToLower();
+                Console.Clear();
+
+                switch (choice)
+                {
+                    case "y":
+                    case "yes":
+                    {
+                        foreach (Challenge challenge in challenges)
+                        {
+                            challenge.RunChallenge(theAdventurer);
+                        }
+                        break;
+                    }
+                    case "n":
+                    case "no":
+                    {
+                        return;
+                    }
+                }
+                
             }
             else
             {
+                string choice;
+
                 Console.WriteLine("I guess you did...ok? ...sorta. Still, you should get out of my sight.");
+                Console.WriteLine("");
+                Console.WriteLine("Would you like to try again?");
+                Console.WriteLine("Y/N:");
+                choice = Console.ReadLine().ToLower();
+                Console.Clear();
+
+                switch (choice)
+                {
+                    case "y":
+                    case "yes":
+                    {
+                        foreach (Challenge challenge in challenges)
+                        {
+                            challenge.RunChallenge(theAdventurer);
+                        }
+                        break;
+                    }
+                    case "n":
+                    case "no":
+                    {
+                        return;
+                    }
+                }
             }
         }
     }

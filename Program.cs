@@ -9,8 +9,10 @@ namespace Quest
     {
         static void Main(string[] args)
         {
+            Console.Clear();
             Console.WriteLine("Enter Your Adventurer's Name:");
             string userName = Console.ReadLine();
+            Console.WriteLine(Adventurer.GetDescription(userName));
             // Create a few challenges for our Adventurer's quest
             // The "Challenge" Constructor takes three arguments
             //   the text of the challenge
